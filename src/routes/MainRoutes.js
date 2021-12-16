@@ -4,7 +4,7 @@ import PrivateRoute from '../core/PrivateRoute';
 import Home from '../Screens/Home';
 // import Login from '../Screens/Login';
 import MainTemplate from '../Template/MainTemplate';
-const Login = React.lazy(() => import('../Screens/Login'));
+import Login from '../Screens/Login';
 
 // dashboard routing
 
@@ -16,7 +16,7 @@ const Login = React.lazy(() => import('../Screens/Login'));
 const MainRoutes = {
 
     path: "/login",
-    element: < Login /> ,
+    element: <Login /> ,
     children: [{
         // path: '/',
         // element: <MainTemplate /> ,

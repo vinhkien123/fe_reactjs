@@ -2,7 +2,6 @@
 import PrivateRoute from '../core/PrivateRoute';
 import Home from '../Screens/Home';
 import DashboardTemplate from '../Template/DashboardTemplate';
-import MainTemplate from '../Template/MainTemplate';
 
 
 
@@ -11,10 +10,10 @@ const DashboardRoutes = {
     path: "/",
     element: < PrivateRoute /> ,
     children: [{
-        path: '/',
-        element: < DashboardTemplate / > ,
+        path: '/dashboard',
+        element: <DashboardTemplate /> ,
         children: [{
-                path: '/',
+                path: '/dashboard',
                 element: < Home />
             },
 

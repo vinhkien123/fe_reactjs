@@ -1,11 +1,39 @@
 import React from 'react';
+import Table from '../../Component/Table';
 
+const arrayTitle = [
+    {
+        title: "Heloo",
+        key: "se"
+    },
+    {
+        title: "Chào",
+        key: "as"
+    },
+    {
+        title: "H2111o",
+        key: "zz"
+    },
+]
+const arraySrouce = [
+    {
+        se: "chào se",
+        as: "Chào as",
+        zz: "H2111o1111111",
+    },
+    {
+        se: "chào se",
+        as: "Chào as",
+    },
+    {
+        zz: "H2111o1111111",
+    },
+]
 function Home(props) {
-    console.log(props);
     return (
-        <div>
-            Home
-        </div>
+        <>
+            <Table arrayTitle={arrayTitle} arrayData={arraySrouce} title={`Title`} />
+        </>
     );
 }
 
