@@ -3,6 +3,7 @@
 // constant
 
 // ==============================|| DASHBOARD MENU ITEMS ||============================== //
+import DashboardIcon from '@mui/icons-material/Dashboard';
 
 const dashboard = {
     id: 'dashboard',
@@ -13,8 +14,8 @@ const dashboard = {
             id: 'default',
             title: 'Dashboard',
             type: 'item',
-            url: '/dashboard/default',
-            icon: "LG",
+            url: '/dashboard',
+            icon: < DashboardIcon /> ,
             breadcrumbs: false
         }
     ]

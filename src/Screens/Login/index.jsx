@@ -14,24 +14,13 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useDispatch } from 'react-redux';
 import { login } from '../../Redux/action/userReducer';
-
-function Copyright(props) {
-    return (
-        <Typography variant="body2" color="text.secondary" align="center" {...props}>
-            {'Copyright © '}
-            <Link color="inherit" href="https://mui.com/">
-                Your Website
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    );
-}
+import { useNavigate } from 'react-router-dom';
 
 const theme = createTheme();
 
 export default function SignInSide() {
     const dispatch = useDispatch()
+    let navigate = useNavigate();
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -39,7 +28,7 @@ export default function SignInSide() {
             email: data.get('email'),
             password: data.get('password'),
         }
-        dispatch(login(dataRequest))
+        dispatch(login(dataRequest, navigate))
     };
 
     return (
@@ -109,7 +98,7 @@ export default function SignInSide() {
                             >
                                 Sign In
                             </Button>
-                            <Grid container>
+                            {/* <Grid container>
                                 <Grid item xs>
                                     <Link href="#" variant="body2">
                                         Forgot password?
@@ -120,8 +109,8 @@ export default function SignInSide() {
                                         {"Don't have an account? Sign Up"}
                                     </Link>
                                 </Grid>
-                            </Grid>
-                            <Copyright sx={{ mt: 5 }} />
+                            </Grid> */}
+                            {/* <Copyright sx={{ mt: 5 }} /> */}
                         </Box>
                     </Box>
                 </Grid>
